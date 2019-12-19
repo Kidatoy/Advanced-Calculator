@@ -67,36 +67,3 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(5.0, Calc().eval('(5+-5)+5'))
         self.assertEqual(-5.0, Calc().eval('(-10+3)+2'))
         self.assertEqual(-26.0, Calc().eval('10-(3*2)^2'))
-    
-    def test_pi(self):
-        """
-        Test pi corner cases
-        """
-        self.assertEqual(4.1415926535, Calc().eval('(pi)+1'))
-        self.assertEqual(1.1415926535, Calc().eval('(pi)-2'))
-        self.assertEqual(3.1415926535, Calc().eval('(pi+-5)+5'))
-        self.assertEqual(1.8584073465, Calc().eval('(-pi+3)+2'))
-        self.assertEqual(-29.478417602100684, Calc().eval('10-(pi*2)^2'))
-        self.assertEqual(1.57079632675, Calc().eval('pi/2'))
-
-    def test_e(self):
-        """
-        Test e corner cases
-        """
-        self.assertEqual(3.7182818284, Calc().eval('(e)+1'))
-        self.assertEqual(0.7182818283999999, Calc().eval('(e)-2'))
-        self.assertEqual(2.7182818284, Calc().eval('(e+-5)+5'))
-        self.assertEqual(2.2817181716, Calc().eval('(-e+3)+2'))
-        self.assertEqual(-19.556224394438587, Calc().eval('10-(e*2)^2'))
-        self.assertEqual(1.3591409142, Calc().eval('e/2'))
-
-    def test_phi(self):
-        """
-        Test phi corner cases
-        """
-        self.assertEqual(2.6180339886999997, Calc().eval('(phi)+1'))
-        self.assertEqual(-0.3819660113000001, Calc().eval('(phi)-2'))
-        self.assertEqual(1.6180339886999997, Calc().eval('(phi+-5)+5'))
-        self.assertEqual(3.3819660113000003, Calc().eval('(-phi+3)+2'))
-        self.assertEqual(-0.47213595435372646, Calc().eval('10-(phi*2)^2'))
-        self.assertEqual(0.80901699435, Calc().eval('phi/2'))
