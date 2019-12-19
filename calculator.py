@@ -38,6 +38,7 @@ class Calculator(object):
     if '*-' in expression: expression = expression.replace('*-','*$')
     if '/-' in expression: expression = expression.replace('/-','/$')
     if '^-' in expression: expression = expression.replace('^-','^$')
+    if 'pi' in expression: expression = expression.replace('pi','3.1415926535')
 
     return expression
 
