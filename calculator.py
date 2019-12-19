@@ -29,7 +29,7 @@ class Calculator(object):
 
     if isinstance(calculation, str):
       calculation = float(calculation)
-
+    
     return calculation
 
   def symbols(self, expression):
@@ -38,9 +38,6 @@ class Calculator(object):
     if '*-' in expression: expression = expression.replace('*-','*$')
     if '/-' in expression: expression = expression.replace('/-','/$')
     if '^-' in expression: expression = expression.replace('^-','^$')
-    if 'pi' in expression: expression = expression.replace('pi','3.1415926535')
-    if 'e' in expression: expression = expression.replace('e','2.7182818284')
-    if 'phi' in expression: expression = expression.replace('phi','1.6180339887')
 
     return expression
 
@@ -75,8 +72,8 @@ class Calculator(object):
     start, stop = self.substr(expression)
     substr = expression[start:stop+1]
     newstr = str(self.eval(expression[start+1: stop]))
-
+   
     return expression.replace(substr, newstr)
-  
+
   def is_compound(self, expression):
     return '(' in expression
